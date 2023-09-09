@@ -69,7 +69,7 @@ const DivWFull = () => {
       <div className="leaderboard">
         <div>
           <h1> Leaderboard</h1>
-          <p> see where you fit against</p>
+          <p> see where you fit against the best</p>
         </div>
         <div>
           <div className="mobilesearch">
