@@ -1,0 +1,252 @@
+body {
+  font-family: "Inter";
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.table-container {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  margin: auto;
+}
+.leaderboard-contains{
+  display: none;
+}
+.leaderboard-container {
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color:#010101;
+}
+
+.leaderboard-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.6125rem;
+  color: #f0eded;
+}
+
+.leaderboard-subtitle {
+  font-size: 1rem;
+  color: #9a9797;
+  margin-bottom: 1.25rem;
+}
+.table-cell-rank img{
+  height: 1.5rem;
+  width: 1rem;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1.25rem;
+  border-radius: 2rem;
+}
+.ulttable{
+  border:0.125rem solid rgb(103, 103, 103);
+  border-radius: 1rem;
+  padding-bottom: 0.5rem;
+}
+.table-header {
+  background-color: #262626;
+  font-weight: bold;
+  color: #615d5d;
+  width: 100%;
+}
+
+.user-row {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0.125rem 0.375rem;
+}
+.searchicon input{
+  color: white;
+  background-color: wheat;
+  margin-left:0.125rem;
+}
+.textwrapper{
+  color: white;
+  background-color: white;
+}
+.table-row {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+ padding: 1rem 0.8rem;
+ background-color: white;
+ border-top-right-radius: 0.9rem;
+ border-top-left-radius: 0.9rem;
+}
+
+.table-header-rank {
+  display: flex;
+  color: #4b4646;
+  font-weight: bold;
+  font-size: 0.75rem;
+  width: 10%;
+}
+
+.table-header-address {
+  width: 31%;
+  display: flex;
+  font-weight: bold;
+  color: #4b4646;
+  font-size: 0.75rem;
+}
+
+.table-header-tradingvolume {
+  width: 25%;
+  display: flex;
+  font-weight: bold;
+  color: #4b4646;
+  font-size: 0.75rem;
+}
+
+.table-header-wl {
+  width:15%;
+  display: flex;
+font-weight: bold;
+  color: #4b4646;
+  font-size: 0.75rem;
+  
+}
+.table-cell-wl span{
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.table-header-biggest-win {
+  display: flex;
+  color: #4b4646;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 26%;
+}
+
+.table-header-pnl {
+  display: flex;
+  color: #4b4646;
+  font-size: bold;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: 8%;
+
+}
+
+.table-cell {
+  display: flex;
+  flex: 1;
+  padding: 0.6125rem;
+  color: #bab5b5;
+  font-size: 0.75rem;
+  width: 100%;
+  align-items: center;
+}
+
+.table-cell-address svg {
+  margin-right: 0.5rem;
+}
+
+.table-cell-rank {
+  width: 9%;
+  margin-left: 0.6125rem;
+  color: #ede8e8;
+  font-size:0.975rem;
+}
+
+.table-cell-address {
+  display: flex;
+  color: #ede8e8;
+  font-size:0.975rem;
+  width: 31%;
+}
+
+.table-cell-tradingvolume {
+  width: 22%;
+  color: #ede8e8;
+  font-size:0.975rem;
+  padding: 0.6125rem;
+}
+
+.table-cell-wl {
+  display: flex;
+  text-align: center;
+  color: #ede8e8;
+  font-size:1rem;
+  font-weight: 600;  width: 14%;
+  padding: 0.6125rem;
+}
+
+.table-cell-biggest-win {
+  display: flex;
+  text-align: center;
+  color: #ede8e8;
+  font-size:0.975rem;
+  width: 26%;
+}
+
+.table-cell-pnl {
+  display: flex;
+  text-align: center;
+  color: #14eb38;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 8%;
+}
+
+.pagination {
+  justify-content: space-between;
+  display: flex;
+  margin-top: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.pagination .page {
+  color: #f0eded;
+  font-size: medium;
+}
+
+.pagination .button {
+  align-items: end;
+  color: grey;
+}
+
+button {
+  padding: 0.275rem 0.6125rem;
+  margin: 0 0;
+  cursor: pointer;
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-container {
+    display: none;
+  }
+  .leaderboard-contains{
+    display: block;
+  }
+}
+.sort-icon {
+  font-size: 12px;
+  margin-left: 4px;
+}
+@media (min-width: 1768px) {
+  /* .leaderboard-container {
+    display: none;
+  } */
+  .leaderboard-contains{
+    display: none;
+  }
+}
