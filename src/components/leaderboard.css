@@ -26,12 +26,36 @@ body {
   font-weight: bold;
   margin-bottom: 0.6125rem;
   color: #f0eded;
+  padding-left: 0.5rem;
 }
 
 .leaderboard-subtitle {
   font-size: 1rem;
   color: #9a9797;
   margin-bottom: 1.25rem;
+  padding-left: 0.5rem;
+}
+.routes{
+  color: white;
+  display: flex;
+  gap: 2rem;
+  padding-left: 0.5rem;
+}
+
+
+.routes a:hover {
+  color: #007BFF;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.active-link {
+  color: #1165be; 
+  font-weight: bold; 
 }
 .table-cell-rank img{
   height: 1.5rem;
@@ -232,12 +256,34 @@ button:disabled {
 }
 
 @media (max-width: 768px) {
-  .leaderboard-container {
+  .leaderboard-container{
     display: none;
   }
   .leaderboard-contains{
     display: block;
   }
+  
+.leaderboard-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.6125rem;
+  color: #f0eded;
+  padding-left: 2rem;
+}
+
+.leaderboard-subtitle {
+  font-size: 1rem;
+  color: #9a9797;
+  margin-bottom: 1.25rem;
+  padding-left: 2rem;
+}
+.routes{
+  color: white;
+  display: flex;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
 }
 .sort-icon {
   font-size: 12px;

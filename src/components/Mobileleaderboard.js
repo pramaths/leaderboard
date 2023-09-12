@@ -4,7 +4,7 @@ import search from "../assests/search.svg";
 import copy from "../assests/copy.svg";
 import copywhite from "../assests/copywhite.svg";
 import bigInt from "big-integer";
-import { getUserTradeStats, winloss } from "./data";
+import { getUserTradeStats, winloss,baseUserTradeStats,basewinloss } from "./data";
 import r1 from "../assests/1.svg";
 import r3 from "../assests/3.svg";
 import rank3 from "../assests/rank3.svg"
@@ -15,7 +15,7 @@ function formatHexWithDots(hexString) {
 
   return `${first5}${middleDots}${last5}`;
 }
-const DivWFull = () => {
+const DivWFull = ({mode}) => {
   const [userData, setUserData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchInput, setSearchInput] = useState("");
@@ -25,8 +25,16 @@ const DivWFull = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userTradeData = await getUserTradeStats();
-        const aggregatedDataWithWinLoss = await winloss(userTradeData);
+        let userTradeData;
+        let aggregatedDataWithWinLoss;
+        if (mode === "optimism") {
+          userTradeData = await getUserTradeStats();
+           aggregatedDataWithWinLoss = await winloss(userTradeData);
+        } else if (mode === "base") {
+          userTradeData = await baseUserTradeStats();
+           aggregatedDataWithWinLoss = await basewinloss(userTradeData);
+        }
+       
         for(let i=0;i<aggregatedDataWithWinLoss?.length;i++){
           aggregatedDataWithWinLoss[i].rank=i+1;
         }
@@ -37,7 +45,7 @@ const DivWFull = () => {
     };
 
     fetchData();
-  }, []);
+  }, [mode]);
 
   const copyToClipboard = (text) => {
     const textField = document.createElement("textarea");
@@ -67,10 +75,10 @@ const DivWFull = () => {
   return (
     <div className="leaderboard-contains">
       <div className="leaderboard">
-        <div>
+        {/* <div>
           <h1> Leaderboard</h1>
           <p> see where you fit against the best</p>
-        </div>
+        </div> */}
         <div>
           <div className="mobilesearch">
             <div className="searchicon">
